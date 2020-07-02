@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
 namespace Demo_CloudflareIntegration.Pages
@@ -12,6 +7,8 @@ namespace Demo_CloudflareIntegration.Pages
   {
     private readonly ILogger<IndexModel> _logger;
 
+    public static int TotalPageLoads { get; set; } = 0;
+
     public IndexModel(ILogger<IndexModel> logger)
     {
       _logger = logger;
@@ -19,7 +16,7 @@ namespace Demo_CloudflareIntegration.Pages
 
     public void OnGet()
     {
-
+      TotalPageLoads++;
     }
   }
 }
