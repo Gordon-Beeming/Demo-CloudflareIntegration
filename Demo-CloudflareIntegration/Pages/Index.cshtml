@@ -8,9 +8,12 @@
   <h1 class="display-4">Welcome</h1>
   <p>The server utc time is @(DateTime.UtcNow.ToString("dd MMM yyyy, hh:mm:sstt")).</p>
   <p>
-This page has been loaded @(IndexModel.TotalPageLoads) times.
+    This page has been loaded @(IndexModel.TotalPageLoads) times.
   </p>
   <p>
     For details contact us on <a href="mailto:cool-things@beeming.co.za">cool-things@beeming.co.za</a>.
+  </p>
+  <p>
+    <a asp-page="/Refresh">real refresh</a>
   </p>
 </div>
